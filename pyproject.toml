@@ -13,6 +13,7 @@ version = "2.11.10"
 homepage = "https://github.com/cmake-wheel/cmeel-coinutils"
 
 [tool.cmeel]
+build-number = 0
 has-sitelib = false
 run-tests = false
 
