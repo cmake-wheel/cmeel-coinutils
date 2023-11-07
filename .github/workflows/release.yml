@@ -19,6 +19,8 @@ jobs:
         exclude:
           - image: "musllinux_1_1"
             arch: "aarch64"
+          - image: "manylinux_2_28" # fixed upstream in #202, so enable this back on next release
+            arch: "aarch64"
     steps:
       - uses: actions/checkout@v4
         with:

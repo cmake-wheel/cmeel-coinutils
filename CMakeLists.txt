@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(NAME coinutils)
+set(NAME CoinUtils)
 set(VERSION "2.11.10")
 
 project(cmeel-${NAME} VERSION ${CMAKE_VERSION})
