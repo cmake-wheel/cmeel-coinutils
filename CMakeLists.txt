@@ -19,8 +19,8 @@ include(ExternalProject)
 ExternalProject_Add(
   ${NAME}
   URL "https://github.com/coin-or/${NAME}/archive/refs/tags/releases/${VERSION}.tar.gz"
-      DOWNLOAD_EXTRACT_TIMESTAMP
-      OFF
+  URL_HASH "SHA1=220d83027f90bc401b24515ae2534ad6ef1e2a82"
+  DOWNLOAD_EXTRACT_TIMESTAMP OFF
   BUILD_IN_SOURCE ON
   CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}"
   BUILD_COMMAND "make" "-j${CMEEL_JOBS}"
