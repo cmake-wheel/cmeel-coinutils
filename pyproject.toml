@@ -11,6 +11,7 @@ version = "2.11.10"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-coinutils"
+upstream = "https://github.com/coin-or/CoinUtils"
 
 [tool.cmeel]
 build-number = 2
