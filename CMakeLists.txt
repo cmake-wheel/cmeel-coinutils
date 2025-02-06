@@ -5,8 +5,9 @@ set(NAME CoinUtils)
 set(VERSION "2.11.12")
 set(EXT tar.gz)
 set(SHA256 eef1785d78639b228ae2de26b334129fe6a7d399c4ac6f8fc5bb9054ba00de64)
+set(TAG_PREFIX releases/)
 
-project("cmeel-${NAME}" VERSION ${CMAKE_VERSION})
+project("cmeel-${NAME}" VERSION ${VERSION})
 
 if(DEFINED ENV{CMEEL_JOBS})
   set(CMEEL_JOBS
@@ -21,7 +22,7 @@ endif()
 include(ExternalProject)
 ExternalProject_Add(
   ${NAME}
-  URL "https://github.com/${ORG}/${NAME}/archive/refs/tags/releases/${VERSION}.${EXT}"
+  URL "https://github.com/${ORG}/${NAME}/archive/refs/tags/${TAG_PREFIX}${VERSION}.${EXT}"
   URL_HASH "SHA256=${SHA256}"
   DOWNLOAD_EXTRACT_TIMESTAMP OFF
   BUILD_IN_SOURCE ON
