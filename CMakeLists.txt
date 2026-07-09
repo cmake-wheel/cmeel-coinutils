@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.30)
 
 set(ORG coin-or)
 set(NAME CoinUtils)
-set(VERSION "2.11.12")
+set(VERSION "2.11.13")
 set(EXT tar.gz)
-set(SHA256 eef1785d78639b228ae2de26b334129fe6a7d399c4ac6f8fc5bb9054ba00de64)
+set(SHA256 ddfea48e10209215748bc9f90a8c04abbb912b662c1aefaf280018d0a181ef79)
 set(TAG_PREFIX releases/)
 
-project("cmeel-${NAME}" VERSION ${VERSION})
+project("cmeel-${NAME}" VERSION "${VERSION}")
 
 if(DEFINED ENV{CMEEL_JOBS})
   set(CMEEL_JOBS
@@ -34,4 +34,4 @@ ExternalProject_Add(
           "${CMAKE_INSTALL_PREFIX}/lib/lib${NAME}.la")
 
 # dummy file for install target
-install(FILES README.md DESTINATION share/cmeel-${NAME}/)
+install(FILES "README.md" DESTINATION "share/cmeel-${NAME}/")
